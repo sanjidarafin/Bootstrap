@@ -1,0 +1,37 @@
+<html>
+<head></head>
+<body>
+<div id="div1">
+  <p id="para1">Hello FTFL!!</p>
+  <p id="para2">Hello comilla!!</p>
+</div>
+
+<script>
+
+var divTag = document.getElementById("div1");
+var newPara = document.createElement("p");
+
+var text = document.createTextNode("Hello PHP Group!!");
+
+newPara.appendChild(text);
+//divTag.appendChild(newPara);
+
+var para1 = document.getElementById("para1");
+//divTag.insertBefore(newPara,para1);
+
+//divTag.removeChild(para1);
+divTag.replaceChild(newPara,para1);
+
+//var para2 = document.getElementById("para2");
+//divTag.insertBefore(newPara,para2);
+//divTag.appendChild(newPara);
+
+console.log();
+
+
+
+</script>
+
+
+</body>
+</html>

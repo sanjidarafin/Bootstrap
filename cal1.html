@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>www.bootstrap grid.com</title>
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+<script>
+	var number=100;
+	function myFunction()
+	{
+		console.log("My number is",number);
+		number=document.getElementById("operand1").value;
+		isNaN(number); //if number is integer return false
+		if (number > 0)
+		{
+		document.getElementById("result").innerHTML = number;
+		}
+		else
+		{
+		document.getElementById("result").innerHTML = "Is not a number";
+		}
+	}
+</script>
+</head>
+<body bgcolor= "#000000" text= "gold">
+
+<form name="calculator">
+<input type="text" id="operand1" value="1" onClick="document.calculator.ans.value+='1'"/>
+</br>
+<input type="text" id="operand2" value="2" onClick="document.calculator.ans.value+='2'"/>
+</br>
+<input type="text" id="operator" value="+" onClick="document.calculator.ans.value+='+'"/>
+</br>
+</br>
+
+<div id="result">Result :- <input type="textfield" name="ans" value="="></div>
+</br>
+
+<button onclick="myFunction()">click me</button>
+</form>
+</body>
+</html>

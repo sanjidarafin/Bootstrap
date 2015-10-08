@@ -1,0 +1,34 @@
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+
+
+
+<script type="text/javascript">
+var first=true;
+var newItem;
+
+function appendItem()
+{
+if(first){
+newItem =
+temp=document.getElementById("items").innerHTML;
+first=false;
+}
+
+console.log("inner html is",newItem);
+document.getElementById("items").innerHTML=
+document.getElementById("items").innerHTML+newItem;
+}
+</script>
+</head>
+<body>
+<div id ="items">
+item<input type="text"/> Quantity <input type="text"/> Amount <input type="text"/>
+</br></br>
+</div>
+<button onclick="appendItem()" value="addit">Add It</button>
+
+</body>
+</html>

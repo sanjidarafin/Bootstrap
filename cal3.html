@@ -1,0 +1,63 @@
+<html>
+
+  <head>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+	
+	<script type="text/javascript">
+        function calculator()
+		{
+			operand1=Number(document.getElementById("operand1").value);
+			operand2=Number(document.getElementById("operand2").value);
+			operator=document.getElementById("operator").value;
+			
+				if(!isNaN(operand1) && !isNaN(operand2))
+				{
+					if("+"==operator)
+					{
+						result=operand1+operand2;
+						document.getElementById("result").innerHTML=result; 
+					 }
+						
+						else if("-"==operator)
+						{
+							result=operand1-operand2;
+							document.getElementById("result").innerHTML=result;
+						}
+					
+							else if("*"==operator)
+							{
+								result=operand1*operand2;
+								document.getElementById("result").innerHTML=result; 
+							}
+						
+							else if("/"==operator)
+							{   
+
+								result=operand1/operand2;
+								document.getElementById("result").innerHTML=result;
+							}
+									
+							    else
+								document.getElementById("result").innerHTML="In valid operator";			
+						
+				}
+			 
+					else
+					
+						document.getElementById("result").innerHTML="Invalid number";
+	    }
+	</script>
+
+</head>
+<body>
+	<div class="container">
+	<h2>Calculator</h2>
+	<input type="text" id="operand1" value=""/></br>
+	<input type="text" id="operand2" value=""/></br>
+	<input type="text" id="operator" value=""/>
+
+	<div id="result">Result is:- </div>
+	<button class="btn btn-success" onClick="calculator()" >Calculate</button>
+ </body>
+
+</html>

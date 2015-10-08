@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script language="javascript">
+          document.write("<table border='1'>");
+		  document.write("<td>");
+          
+		   
+		   
+            for(n = 0 ; n < 100; n++){
+                var x=1;
+                if(n==0 || n==1) x=0;
+                for(i=2;i<n;i++)
+                {
+                    if(n%i==0)
+                    {
+                        x=0;
+                        break;
+                    }
+                }
+                if(x==1)
+                {
+                    document.write("<td>"); 
+                    
+                    document.write(n);
+					
+                    document.write("</td>");
+                }
+                else
+                { 
+               
+                }
+            }  
+           document.write("</table>");
+        </script>
+    </head>
+    <body>
+
+	
+   </body>
+   </html>

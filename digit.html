@@ -1,0 +1,65 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+
+<script>
+
+var num;
+output=[];
+function digit(){
+
+     num = document.getElementById("number").value;
+	 
+	 if(isNaN(num))
+	 {
+	    document.getElementById("result").innerHTML = "This is not a number";
+	 }
+	 
+	 else{
+	 
+	    number = Number(num);
+		
+		len = num.length;
+		
+		document.write(len);
+		
+		document.write("<br/>");
+		document.write("<br/>");
+
+     while(number){
+  
+         output.push(number%10);
+         number = Math.floor(number/10);
+
+        }
+
+console.log(output.reverse().join(''));
+
+document.write(output);
+
+         
+		 }
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div id="container">
+<p>The lenght of the number is:</p>
+
+<h4>Enter a digit:</h4><br><input type="text" id="number" />
+
+
+<div id="result"></div>
+
+
+<button type="button" onClick="digit()">The Digits are</button>
+
+<div>
+
+</body>
+</html>
